@@ -1,4 +1,1 @@
-#main-content
-{
-    margin-top: 200px;
-}
+html{font-size:62.5%}body{font-family:'Open Sans',sans-serif}li,p{font-size:16px;font-size:1.6rem;padding-bottom:16px}.bg:first-child{padding:150px 0;padding:50vh 0}.bg{padding:8vh 0;min-height:100vh}.bg.black{background:#343434;color:#fefefe}.bg.blue{background:#58c2eb;color:#fefefe}.bg.purple{background:#786099;color:#fefefe}.bg.red{background:#ba2c1c;color:#fefefe}.bg.yellow{background:#fbbf15;color:#fefefe}.bg.green{background:#5aa55d;color:#fefefe}.btn{border-width:2px}.btn-ghost{background:0 0!important;border-color:#fefefe!important;color:#fefefe!important}.project-title{padding:16px 0 32px 0;margin:0}
