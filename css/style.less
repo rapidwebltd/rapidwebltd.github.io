@@ -1,66 +1,15 @@
-/**Palette**/
-@blue: #58C2EB;
-@grey-blue: #9CC2CB;
-@purple: #786099;
-@red: #BA2C1C;
-@yellow: #FBBF15;
-@green: #5AA55D;
-@white: #FEFEFE;
-@black: #343434;
-/**End of Palette**/
-
-//== Media queries breakpoints
-//
-//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
-
-// Extra small screen / phone
-//** Deprecated `@screen-xs` as of v3.0.1
-@screen-xs:                  480px;
-//** Deprecated `@screen-xs-min` as of v3.2.0
-@screen-xs-min:              @screen-xs;
-//** Deprecated `@screen-phone` as of v3.0.1
-@screen-phone:               @screen-xs-min;
-
-// Small screen / tablet
-//** Deprecated `@screen-sm` as of v3.0.1
-@screen-sm:                  768px;
-@screen-sm-min:              @screen-sm;
-//** Deprecated `@screen-tablet` as of v3.0.1
-@screen-tablet:              @screen-sm-min;
-
-// Medium screen / desktop
-//** Deprecated `@screen-md` as of v3.0.1
-@screen-md:                  992px;
-@screen-md-min:              @screen-md;
-//** Deprecated `@screen-desktop` as of v3.0.1
-@screen-desktop:             @screen-md-min;
-
-// Large screen / wide desktop
-//** Deprecated `@screen-lg` as of v3.0.1
-@screen-lg:                  1200px;
-@screen-lg-min:              @screen-lg;
-//** Deprecated `@screen-lg-desktop` as of v3.0.1
-@screen-lg-desktop:          @screen-lg-min;
-
-// So media queries don't overlap when required, provide a maximum
-@screen-xs-max:              (@screen-sm-min - 1);
-@screen-sm-max:              (@screen-md-min - 1);
-@screen-md-max:              (@screen-lg-min - 1);
-
+@import "mixins.less";
+@import "typography.less";
+@import "vars.less";
 
 a {font-weight: bold;}
 html {font-size: 62.5%}
 body {
 	font-family: 'Open Sans', sans-serif;
+	color: @black;
 }
 footer {padding: 150px 0; padding: 30vh 0 !important;}
-p, li {
-	font-size: 16px; 
-	font-size: 1.6rem;
-	padding-bottom: 16px;
-	line-height: 32px;
-	line-height: 3.2rem;
-}
+
 
 .bg:first-child, .bg.blue {
 	padding: 150px 0;
@@ -70,26 +19,50 @@ p, li {
 	padding: 8vh 0;
 	min-height: 100vh;
 }
-.bg.black{background: @black; color: @white; .btn-ghost:hover {color: @black !important;}}
-.bg.blue {background: @blue; color: @white; .btn-ghost:hover {color: @blue !important;}}
-.bg.purple {background: @purple; color: @white; .btn-ghost:hover {color: @purple !important;}}
-.bg.red {background: @red; color: @white; .btn-ghost:hover {color: @red !important;}}
-.bg.yellow {background: @yellow; color: @white; .btn-ghost:hover {color: @yellow !important;}}
-.bg.green {background: @green; color: @white; .btn-ghost:hover {color: @green !important;}}
-.bg.grey-blue {background: @grey-blue; color: @black; .btn-ghost:hover {color: @grey-blue !important;}}
+.bg.black{background: @black; color: @white;}
+.bg.grey-blue {
+	background: @grey-blue; 
+	color: @black; 
+}
 .btn {
 	border-width: 1px; 
 	border-radius: 0px;
 	text-transform: uppercase;
 }
 .btn-ghost {
-	background: none !important;
-	border-color: @white !important;
-	color: @white !important;
+	background: none;
+	border-color: @white;
+	color: @white;
 }
-.btn-ghost:hover {
-	background: @white !important; //Todo: FadeIn animation
-	color: @black;
+
+.bg.grey-blue{
+	.btn-ghost {
+		background: none;
+		border-color: @white;
+		color: @white;
+		&:hover {
+			background: @white;
+			color: @grey-blue;
+		}
+	}
+}
+
+.bg.white {
+	.btn-ghost {
+		background: none;
+		border-color: @grey-blue;
+		color: @grey-blue;
+		&:hover {
+			background: @grey-blue;
+			border-color: @grey-blue;
+			color: @white;
+		}
+		&:focus {
+			background: @grey-blue;
+			border-color: @grey-blue;
+			color: @white;
+		}
+	}
 }
 .footer-link, .footer:hover {
 	color: @white !important;
@@ -104,14 +77,3 @@ p, li {
 	text-transform: uppercase;
 }
 
-h1.lead {
-	margin-bottom: 32px;
-	font-size: 64px; font-size: 6.4rem;
-	@media screen and (max-width: @screen-xs) {
-		font-size: 32px; font-size: 3.2rem;
-	}
-}
-
-h3 {
-	text-transform: uppercase;
-}

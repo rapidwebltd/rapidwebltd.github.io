@@ -1,0 +1,20 @@
+.btn-cols (@background: none, @colour: #000, @alt-colour: @colour) {
+	background: none;
+	border-color: @background;
+	color: @colour;
+	&:hover {
+		background: @background;
+		border-color: @background;
+		color: @alt-colour !important;
+	}
+	&:focus {
+		background: @background;
+		border-color: @background;
+		color: @alt-colour !important;
+	}
+	&:active {
+		background: @background;
+		border-color: @background;
+		color: @alt-colour !important;
+	}
+}
