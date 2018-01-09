@@ -1,0 +1,35 @@
+{
+  "name": "rapidweb-project-boilerplate",
+  "description": "Rapid Web's workflow for new projects.",
+  "main": "gulpfile.js",
+  "authors": [
+    "Rapid Web Ltd"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "project",
+    "workflow",
+    "php",
+    "html",
+    "gulp",
+    "js",
+    "css",
+    "less"
+  ],
+  "homepage": "https://github.com/rapidwebltd/rapidweb-project-boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Yamm3": "yamm3#^1.1.0",
+    "animate.less": "*",
+    "basic-js-cookie-banner": "*",
+    "direct-share-buttons": "*",
+    "rapid-style": "*",
+    "wow": "^1.1.2"
+  }
+}
