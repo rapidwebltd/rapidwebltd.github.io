@@ -19,24 +19,24 @@
     <![endif]-->
   </head>
   <body>
-    <div class="bg black">
+    <div class="bg-dark text-light">
       <div class="container">
-        <div class="text-center"><img src="./assets/images/logo.svg" alt="Rapid Web" class="logo" width="250"> </div>
-        <h1 class="lead text-center">We <span class="fa fa-heart"></span> Open Source</h1>
-        <p class="text-center"><span href="#" class="btn btn-default btn-lg btn-ghost btn-projects">Our Projects</span> <a target="_blank" href="//github.com/orgs/rapidwebltd/" class="btn btn-default btn-lg btn-ghost">GitHub Page</a></p>
+        <div class="text-center pt-5 pb-5"><img src="./assets/images/logo.svg" alt="Rapid Web" class="logo" width="250"> </div>
+        <h1 class="text-center pb-5">We <span class="fa fa-heart text-danger"></span> Open Source</h1>
+        <p class="text-center pb-5 m-0"><span href="#" class="btn btn-outline-light btn-lg btn-projects pl-5 pr-5 ml-3 mr-3">Our Projects</span> <a target="_blank" href="//github.com/orgs/rapidwebltd/" class="btn btn-outline-light btn-lg pl-5 pr-5 ml-3 mr-3">GitHub Page</a></p>
       </div>
     </div>
 
-    <div class="bg white">
+    <div class="bg-light pt-5 pb-5 mb-5">
       <div class="container">
-        <h2 class="project-title">Our Efforts</h2>
+        <h2 class="project-title text-center mb-5">Our Open Source Efforts</h2>
         <div class="row">
-          <div class="col-9 col-sm-6">
+          <div class="col-9 col-sm-6 pt-5">
             <p>We have made strides to build a healthy Open Source ecosystem using GitHub to share plugins, libraries, and even knowledge through the use of GitHub platform. There are many reasons why commercial developers should embrace open source software, including increasing software security, better code quality, lower running costs and <strong>MUCH</strong> more.</p>
 
-            <p>This mini site is powered by GitHub Pages, it aims to provide a dashboard for showing an overview of the activity on our organisation repositories as well as show casing our recent featured projects with an in-depth description of each project featured.</p>
+            <p>This mini site is powered by GitHub Pages, it aims to provide a dashboard for showing an overview of the activity on our organisation repositories as well as show casing our recent featured projects with an overview of each project featured.</p>
 
-            <p class="text-center"><a target="_blank" href="https://www.rapidweb.biz/news/rapid-webs-open-source-contributions-2016-2017-18043159/" class="btn btn-outline-secondary btn-lg">Read Blog Post</a></p>
+            <p class="text-center"><a target="_blank" href="https://rapidweb.biz/news/category/open-source-software/" class="btn btn-outline-secondary btn-lg mt-5 mb-5 pl-5 pr-5">Read our Blog Posts</a></p>
           </div>
           <div class="col-3 col-sm-6"><p><img src="assets/images/Open-Source-Logo.png" class="img-fluid" alt="Open Source Logo"></p></div>
         </div>
@@ -44,14 +44,15 @@
     </div>
 
     <div class="container">
+      <h2 class="project-title text-center mb-5">Our Open Source Projects</h2>
       <div id="packages" class="card-columns"></div>
     </div>
 
-    <footer class="bg black">
+    <footer class="bg-dark text-light mt-5 p-5 p-5">
       <div class="container-fluid">
         <h1 class="text-center">Looking for more Open Source goodness?</h1>
         <br>
-        <p class="text-center"><a target="_blank" href="https://github.com/rapidwebltd" class="btn btn-outline-secondary btn-lg">View More on GitHub</a></p>
+        <p class="text-center"><a target="_blank" href="https://github.com/rapidwebltd" class="btn btn-outline-light btn-lg mt-3 mb-3 pl-5 pr-5">View More on GitHub</a></p>
         <p class="text-center">Brought to you by <a target="_blank" href="https://rapidweb.biz" class="footer-link">Rapid Web</a></p>
       </div>
     </footer>
@@ -96,13 +97,12 @@
               packages.push(package);
               console.log(package);
 
-              $('#packages').append('<div class="card text-center wow fadeInUp" data-wow-delay="1s" data-wow-offset="10"><div class="card-body"><h5 class="card-title text-capitalize">'+title+'</h5><p class="card-text">Downloads: <span class="badge badge-secondary">'+package.downloads.total+'</span></p><p class="card-text text-left">'+package.description+'</p><p class="text-center"><a href="'+package.repository+'" class="btn btn-outline-primary">View Project</a></p></div></div>');
-
+              $('#packages').append('<div class="card text-center wow fadeInUp" data-wow-delay="1s" data-wow-offset="10"><div class="card-body"><h5 class="card-title text-capitalize">'+title+'</h5><p class="card-text">Downloads: <span class="badge badge-secondary">'+package.downloads.total+'</span></p><p class="card-text text-left">'+package.description+'</p><p class="text-center m-0"><a href="'+package.repository+'" class="btn btn-outline-primary btn-lg btn-block">View Project</a></p></div></div>');
 
             });
 
           }
-          
+
           packages.sort(function(a, b){
                 console.log(a);
                   a.downloads.total-b.downloads.total
@@ -113,4 +113,4 @@
       });
     </script>
   </body>
-  </html>
+</html>
