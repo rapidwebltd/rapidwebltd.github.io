@@ -17,19 +17,20 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>.wow {visibility:hidden;}</style>
   </head>
   <body>
     <div class="bg-dark text-light">
-      <div class="container">
-        <div class="text-center pt-5 pb-5"><img src="./assets/images/logo.svg" alt="Rapid Web" class="logo" width="250"> </div>
-        <h1 class="text-center pb-5">We <span class="fa fa-heart text-danger"></span> Open Source</h1>
-        <p class="text-center pb-5 m-0"><span href="#" class="btn btn-outline-light btn-lg btn-projects pl-5 pr-5 mt-1 mb-1 ml-3 mr-3">Our Projects</span> <a target="_blank" href="//github.com/orgs/rapidwebltd/" class="btn btn-outline-light btn-lg pl-5 pr-5 mt-1 mb-1 ml-3 mr-3">GitHub Page</a></p>
+      <div class="container" style="padding: 15vh 0;">
+        <div class="text-center pt-5 pb-5 wow fadeIn"><img src="./assets/images/logo.svg" alt="Rapid Web" class="logo" width="250"> </div>
+        <h1 class="text-center pb-5 wow fadeIn" data-wow-delay="0.25s">We <span class="fa fa-heart text-danger"></span> Open Source</h1>
+        <p class="text-center pb-5 m-0 wow fadeIn" data-wow-delay="0.5s"><span href="#" class="btn btn-outline-light btn-lg btn-projects pl-5 pr-5 mt-1 mb-1 ml-3 mr-3">Our Projects</span> <a target="_blank" href="//github.com/orgs/rapidwebltd/" class="btn btn-outline-light btn-lg pl-5 pr-5 mt-1 mb-1 ml-3 mr-3">GitHub Page</a></p>
       </div>
     </div>
 
     <div class="bg-light pt-5 pb-5 mb-5">
       <div class="container">
-        <h2 class="project-title text-center mb-5">Our Open Source Efforts</h2>
+        <h2 class="project-title text-center mb-5 wow fadeIn">Our Open Source Efforts</h2>
         <div class="row">
           <div class="col-9 col-sm-6 pt-5">
             <p>We have made strides to build a healthy Open Source ecosystem using GitHub to share plugins, libraries, and even knowledge through the use of GitHub platform.</p>
@@ -48,7 +49,7 @@
     </div>
 
     <div class="container">
-      <h2 class="project-title text-center mb-5">Our Open Source Projects</h2>
+      <h2 class="project-title text-center mb-5 wow fadeIn">Our Open Source Projects</h2>
       <div id="packages" class="card-columns"></div>
     </div>
 
@@ -82,7 +83,7 @@
       <script>
       //Scroll to projects
       $(document).ready(function (){
-
+        new WOW().init();
         $(".btn-projects").click(function (){
           $('html, body').animate({
             scrollTop: $(".project-title").offset().top
@@ -101,7 +102,7 @@
               packages.push(package);
               console.log(package);
 
-              $('#packages').append('<div class="card text-center wow fadeInUp" data-wow-delay="1s" data-wow-offset="10"><div class="card-body"><h5 class="card-title text-capitalize">'+title+'</h5><p class="card-text">Downloads: <span class="badge badge-info">'+package.downloads.total+'</span></p><p class="card-text text-left">'+package.description+'</p><p class="text-center m-0"><a href="'+package.repository+'" class="btn btn-outline-info btn-lg btn-block">View Project</a></p></div></div>');
+              $('#packages').append('<div class="card text-center wow fadeIn" data-wow-delay="0.5s" data-wow-offset="5"><div class="card-body"><h5 class="card-title text-capitalize">'+title+'</h5><p class="card-text">Downloads: <span class="badge badge-info">'+package.downloads.total+'</span></p><p class="card-text text-left">'+package.description+'</p><p class="text-center m-0"><a href="'+package.repository+'" class="btn btn-outline-info btn-lg btn-block">View Project</a></p></div></div>');
 
             });
 
