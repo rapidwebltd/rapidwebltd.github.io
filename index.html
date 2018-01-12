@@ -57,7 +57,7 @@
         <h3 class="text-center">Looking for more Open Source goodness?</h3>
         <br>
         <p class="text-center"><a target="_blank" href="https://github.com/rapidwebltd" class="btn btn-outline-light btn-lg mt-3 mb-3 pl-5 pr-5">View More on GitHub</a></p>
-        <p class="text-center">Brought to you by <a target="_blank" href="https://rapidweb.biz" class="footer-link">Rapid Web</a></p>
+        <p class="text-center">Brought to you by <a target="_blank" href="https://rapidweb.biz" class="footer-link text-info">Rapid Web</a></p>
       </div>
     </footer>
     <script type="text/javascript">
@@ -101,7 +101,7 @@
               packages.push(package);
               console.log(package);
 
-              $('#packages').append('<div class="card text-center wow fadeInUp" data-wow-delay="1s" data-wow-offset="10"><div class="card-body"><h5 class="card-title text-capitalize">'+title+'</h5><p class="card-text">Downloads: <span class="badge badge-secondary">'+package.downloads.total+'</span></p><p class="card-text text-left">'+package.description+'</p><p class="text-center m-0"><a href="'+package.repository+'" class="btn btn-outline-primary btn-lg btn-block">View Project</a></p></div></div>');
+              $('#packages').append('<div class="card text-center wow fadeInUp" data-wow-delay="1s" data-wow-offset="10"><div class="card-body"><h5 class="card-title text-capitalize">'+title+'</h5><p class="card-text">Downloads: <span class="badge badge-info">'+package.downloads.total+'</span></p><p class="card-text text-left">'+package.description+'</p><p class="text-center m-0"><a href="'+package.repository+'" class="btn btn-outline-info btn-lg btn-block">View Project</a></p></div></div>');
 
             });
 
