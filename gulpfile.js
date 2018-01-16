@@ -18,19 +18,27 @@ var gulp = require('gulp'),
     cat = require('gulp-concat'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    htmlmin = require('gulp-htmlmin');;
 
-gulp.task('default', ['sass', 'js-build', 'fonts']);
+gulp.task('default', ['sass', 'js-build', 'fonts', 'html-build']);
 
 /*Watch Task*/
 gulp.task('watch', function() {
     gulp.watch(sass_dir, ['sass-main']);
-    gulp.watch(js_dir, ['js-build-dev']);
+    gulp.watch(js_dir, ['js-build']);
+    gulp.watch('src/*.html', ['html-build']);
 });
 /*Compile LESS*/
 gulp.task('sass', ['sass-main']);
 gulp.task('scss', ['sass-main']);
 gulp.task('less', ['sass-main']);
+
+gulp.task('html-build', function() {
+  return gulp.src('src/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./'));
+});
 
 gulp.task('sass-main', function() {
     return gulp
