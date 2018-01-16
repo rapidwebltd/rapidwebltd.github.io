@@ -1,11 +1,11 @@
 var sass_dir = [
-    './scss/style.scss'],
+    './src/scss/style.scss'],
     js_dir = [
     './node_modules/jquery/dist/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
     './node_modules/bootstrap/dist/js/bootstrap.js',
     './node_modules/wowjs/dist/wow.min.js',
-    './js/scripts.js'],
+    './src/js/scripts.js'],
     js_output_dir = './public/js',
     css_dir = './public/css',
     fonts_dir = ['./node_modules/font-awesome/fonts/*'],
@@ -35,7 +35,7 @@ gulp.task('scss', ['sass-main']);
 gulp.task('less', ['sass-main']);
 
 gulp.task('html-build', function() {
-  return gulp.src('src/*.html')
+  return gulp.src('./src/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./'));
 });
