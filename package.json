@@ -26,31 +26,19 @@
     "url": "https://github.com/rapidwebltd/rapidweb-project-boilerplate/issues"
   },
   "homepage": "https://github.com/rapidwebltd/rapidweb-project-boilerplate#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-bootlint": "^0.7.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-image-optimization": "^0.1.3",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-less": "^3.0.5",
-    "gulp-livereload": "^3.8.1",
-    "gulp-uglify": "^1.5.3",
-    "gulp-watch": "^4.3.5",
-    "jshint": "^2.9.1",
-    "jshint-stylish": "^2.1.0",
-    "less-plugin-clean-css": "^1.5.1"
-  },
   "dependencies": {
-    "gulp-bootlint": "^0.7.1",
+    "bootstrap": "^4.0.0-beta",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-less": "^3.0.5",
-    "gulp-uglify": "^1.5.3",
-    "gulp-watch": "^4.3.5",
-    "jshint": "^2.9.1",
-    "jshint-stylish": "^2.1.0",
-    "less-plugin-clean-css": "^1.5.1"
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "jquery": "^3.2.1",
+    "path": "^0.12.7",
+    "popper.js": "^1.12.9",
+    "wowjs": "^1.1.3"
   }
 }
