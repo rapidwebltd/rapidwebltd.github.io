@@ -1,0 +1,45 @@
+{
+  "name": "rapidweb-project-boilerplate",
+  "version": "1.2.0",
+  "description": "Rapid Web's workflow for new projects.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rapidwebltd/rapidweb-project-boilerplate.git"
+  },
+  "keywords": [
+    "project",
+    "workflow",
+    "php",
+    "html",
+    "gulp",
+    "js",
+    "css",
+    "less"
+  ],
+  "author": "Rapid Web Ltd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rapidwebltd/rapidweb-project-boilerplate/issues"
+  },
+  "homepage": "https://github.com/rapidwebltd/rapidweb-project-boilerplate#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "jquery": "^3.2.1",
+    "path": "^0.12.7",
+    "popper.js": "^1.12.9",
+    "wowjs": "^1.1.3"
+  }
+}
